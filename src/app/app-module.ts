@@ -1,4 +1,5 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProvider } from './app.routing';
 
@@ -9,6 +10,8 @@ import { HijococheComponent } from './components/hijocoche.component/hijocoche.c
 import { PadrecocheComponent } from './components/padrecoche.component/padrecoche.component';
 import { PadredeportesComponent } from './components/padredeportes.component/padredeportes.component';
 import { HijodeportesComponent } from './components/hijodeportes.component/hijodeportes.component';
+import { LibreriaComponent } from './components/libreria-component/libreria-component';
+import { ComicComponent } from './components/comic-component/comic-component';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { HijodeportesComponent } from './components/hijodeportes.component/hijod
     HijococheComponent,
     PadrecocheComponent,
     PadredeportesComponent,
-    HijodeportesComponent
+    HijodeportesComponent,
+    LibreriaComponent,
+    ComicComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

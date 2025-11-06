@@ -7,6 +7,8 @@ import { ListaProductosComponent } from './components/lista.productos.component/
 import { MenuProductosComponent } from './components/menu.productos.component/menu.productos.component';
 import { HijococheComponent } from './components/hijocoche.component/hijocoche.component';
 import { PadrecocheComponent } from './components/padrecoche.component/padrecoche.component';
+import { PadredeportesComponent } from './components/padredeportes.component/padredeportes.component';
+import { HijodeportesComponent } from './components/hijodeportes.component/hijodeportes.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PadrecocheComponent } from './components/padrecoche.component/padrecoch
     ListaProductosComponent,
     MenuProductosComponent,
     HijococheComponent,
-    PadrecocheComponent
+    PadrecocheComponent,
+    PadredeportesComponent,
+    HijodeportesComponent
   ],
   imports: [
     BrowserModule,

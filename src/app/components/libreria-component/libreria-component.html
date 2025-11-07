@@ -1,1 +1,25 @@
-<p>libreria-component works!</p>
+<div>
+    <h1>Libreria component</h1>
+    <form #comicForm="ngForm">
+        <label for="">titulo</label>
+        <input type="text" name="cajatitulo" #cajatitulo><br>
+        <label for="">Descripcion</label>
+        <input type="text" name="cajadescripcion" #cajadescripcion><br>
+        <label for="">Imagen</label>
+        <input type="text" name="cajaimagen" #cajaimagen><br>
+        <button (click)="createComic()">Crear comic</button>
+    </form>
+    @if(comicFavorito){
+    <div style="background-color: aquamarine;">
+        <h2 style="color: greenyellow;">{{comicFavorito.titulo}}</h2>
+        <h3>{{comicFavorito.descripcion}}</h3>
+        <img src={{comicFavorito.imagen}} alt="" style="width:200px;height:200px">
+    </div>
+    }
+
+    @for (c of comics; track c; let i= $index){
+    <app-comic-component [comic]="c" [index]="i" (seleccionarFavorito)="seleccionarFavorito($event)"
+        (deleteComic)="deleteComic($event)"></app-comic-component>
+    }
+
+</div>

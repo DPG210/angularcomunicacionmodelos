@@ -8,7 +8,7 @@ import { ServiceComics } from '../../services/service.comics';
   templateUrl: './libreria-component.html',
   styleUrl: './libreria-component.css',
   //DEBEMOS DECLARAR EL SERVICIO PARA PODER RECUPERARLO DENTRO DE UN CONSTRUCTOR
-  providers:[ServiceComics]
+  
 })
 export class LibreriaComponent implements OnInit{
   @ViewChild("cajatitulo") cajaTitulo!: ElementRef;

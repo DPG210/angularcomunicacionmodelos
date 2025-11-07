@@ -2,6 +2,7 @@ import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProvider } from './app.routing';
+import { ServiceComics } from './services/service.comics';
 
 import { App } from './app';
 import { ListaProductosComponent } from './components/lista.productos.component/lista.productos.component';
@@ -28,11 +29,13 @@ import { ComicComponent } from './components/comic-component/comic-component';
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    appRoutingProvider
+    appRoutingProvider,
+    ServiceComics
   ],
   bootstrap: [App]
 })
